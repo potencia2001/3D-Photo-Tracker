@@ -1,0 +1,160 @@
+3D Photo Tracker — Licenses and Legal Notices
+==============================================
+Copyright (c) 2026 Nicolás Torregiani. All rights reserved.
+This application (“3D Photo Tracker”) and its original source code, UI, and
+assets (excluding third-party components listed below) are proprietary
+software. You may not copy, modify, distribute, or create derivative works
+of those parts except as permitted by applicable law or with written
+permission from the copyright holder.
+Distribution of this app through Google Play is also subject to Google Play’s
+terms and policies.
+────────────────────────────────────────────────────────────────────────────
+1. GOOGLE ML KIT — FACE MESH DETECTION & FACE DETECTION
+────────────────────────────────────────────────────────────────────────────
+This app uses Google ML Kit on-device APIs for face tracking, including:
+  • ML Kit Face Mesh Detection (com.google.mlkit:face-mesh-detection)
+  • ML Kit Face Detection (com.google.mlkit:face-detection)
+Your use of ML Kit is governed by:
+  • ML Kit Terms of Service
+    https://developers.google.com/ml-kit/terms
+  • Google APIs Terms of Service
+    https://developers.google.com/terms
+  • Google Privacy Policy (including metrics sent by ML Kit)
+    https://policies.google.com/privacy
+Important points (summary; the Google terms above prevail):
+  • Processing of camera images for face mesh / face detection runs on-device.
+    ML Kit does not send those images or face mesh outputs to Google servers
+    for inference.
+  • ML Kit may contact Google servers for updates, compatibility, bug fixes,
+    and performance metrics, as described in Google’s documentation.
+  • You may not reverse engineer or attempt to extract ML Kit models or
+    source code except where applicable law expressly allows it.
+  • Face Mesh Detection is a beta API and may change without backward
+    compatibility guarantees.
+Facial data in this app:
+  • Face mesh and tracking are processed locally on the device.
+  • The app does not upload face images, face meshes, or biometric templates
+    to the developer’s servers.
+  • User-created 3D photos/videos and saved items are stored in the app’s
+    private local storage on the device unless the user explicitly exports
+    or shares them.
+You are responsible for informing end users about Google’s processing of
+ML Kit metrics data where required by law (e.g. Google Play / App Store
+data safety disclosures).
+Open-source components bundled with ML Kit / related Google libraries may
+be licensed under the Apache License 2.0. See Section 6 below.
+────────────────────────────────────────────────────────────────────────────
+2. DEPTH ANYTHING V2 — SMALL MODEL (DEPTH ESTIMATION)
+────────────────────────────────────────────────────────────────────────────
+This app uses the monocular depth estimation model:
+  • Depth Anything V2 — Small variant
+  • Bundled file: depth_anything_v2_small_fp16.onnx
+  • Inference via Microsoft ONNX Runtime for Android
+The Depth-Anything-V2-Small model weights are licensed under the
+Apache License, Version 2.0.
+Source project:
+  https://github.com/DepthAnything/Depth-Anything-V2
+Project homepage / paper:
+  https://depth-anything-v2.github.io/
+License note from the upstream repository:
+  • Depth-Anything-V2-Small → Apache License 2.0
+  • Depth-Anything-V2-Base / Large / Giant → CC-BY-NC-4.0 (NOT used in this app)
+This app uses ONLY the Small model (Apache-2.0). It does NOT ship Base,
+Large, or Giant variants.
+The ONNX file included in the app may be a converted/optimized build
+(e.g. FP16) derived from the upstream Small checkpoint. Any such conversion
+is a derivative work of the Small model and remains subject to Apache 2.0
+and the attribution requirements below.
+Suggested attribution (recommended in app “About” / store listing):
+  “Depth maps powered by Depth Anything V2 (Small), © DepthAnything /
+   contributors, licensed under Apache 2.0.”
+────────────────────────────────────────────────────────────────────────────
+3. MICROSOFT ONNX RUNTIME
+────────────────────────────────────────────────────────────────────────────
+Depth inference uses:
+  • com.microsoft.onnxruntime:onnxruntime-android
+Licensed under the MIT License.
+Copyright (c) Microsoft Corporation.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+https://github.com/microsoft/onnxruntime
+────────────────────────────────────────────────────────────────────────────
+4. OTHER OPEN-SOURCE LIBRARIES (SUMMARY)
+────────────────────────────────────────────────────────────────────────────
+This app also includes the following third-party software (non-exhaustive):
+  • AndroidX / Jetpack (Apache License 2.0)
+  • Kotlin / kotlinx.coroutines (Apache License 2.0)
+  • CameraX (Apache License 2.0)
+  • Google Material Components (Apache License 2.0)
+  • Glide (BSD 2-Clause + Apache 2.0 components)
+  • Google Guava (Apache License 2.0)
+  • Google LiteRT / TensorFlow Lite edge runtime (Apache License 2.0)
+  • ConstraintLayout, ExifInterface, etc. (Apache License 2.0)
+Full license texts for Apache 2.0 components:
+  http://www.apache.org/licenses/LICENSE-2.0
+────────────────────────────────────────────────────────────────────────────
+5. GOOGLE PLAY SERVICES & MONETIZATION
+────────────────────────────────────────────────────────────────────────────
+This app may use:
+  • Google Play Billing (in-app purchases / subscriptions)
+  • Google Mobile Ads (AdMob)
+  • Google User Messaging Platform (consent)
+  • Google Play In-App Updates / In-App Review
+Use of these services is subject to Google’s applicable terms and policies,
+including AdMob / Google Ads policies and Google Play Developer Program
+Policies. End users must also comply with those terms when using paid or
+ad-supported features.
+────────────────────────────────────────────────────────────────────────────
+6. APACHE LICENSE 2.0 — FULL TEXT (REFERENCE)
+────────────────────────────────────────────────────────────────────────────
+Applies to: Depth Anything V2 Small, ML Kit-related OSS components,
+AndroidX, CameraX, Kotlin, Material, LiteRT, and other Apache-2.0 libraries.
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+   1. Definitions. [...]
+   2. Grant of Copyright License. [...]
+   3. Grant of Patent License. [...]
+   4. Redistribution. You may reproduce and distribute copies of the Work
+      or Derivative Works thereof in any medium, with or without modifications,
+      provided that You meet the following conditions:
+      (a) You must give any other recipients of the Work or Derivative Works
+          a copy of this License; and
+      (b) You must cause any modified files to carry prominent notices stating
+          that You changed the files; and
+      (c) You must retain, in the Source form of any Derivative Works that
+          You distribute, all copyright, patent, trademark, and attribution
+          notices from the Source form of the Work, excluding those notices
+          that do not pertain to any part of the Derivative Works; and
+      (d) If the Work includes a "NOTICE" text file, You must include that
+          NOTICE file in your distributions.
+   [... remainder of Apache 2.0 standard text ...]
+   END OF TERMS AND CONDITIONS
+────────────────────────────────────────────────────────────────────────────
+7. DISCLAIMER
+────────────────────────────────────────────────────────────────────────────
+THIS APP IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+Depth maps and 3D effects are generated automatically and may be inaccurate.
+Do not rely on this app for safety-critical, medical, navigation, or legal
+purposes.
+────────────────────────────────────────────────────────────────────────────
+8. CONTACT
+────────────────────────────────────────────────────────────────────────────
+For licensing or legal inquiries:
+  ntorregiani@gmail.com
