@@ -48,7 +48,7 @@ be licensed under the Apache License 2.0. See Section 6 below.
 ────────────────────────────────────────────────────────────────────────────
 This app uses the monocular depth estimation model:
   • Depth Anything V2 — Small variant
-  • Bundled file: depth_anything_v2_small_fp16.onnx
+  • Bundled file: depth_anything_v2_small_fp16Q.onnx
   • Inference via Microsoft ONNX Runtime for Android
 The Depth-Anything-V2-Small model weights are licensed under the
 Apache License, Version 2.0.
